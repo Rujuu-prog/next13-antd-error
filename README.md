@@ -8,6 +8,12 @@ I also tried the dynamic import method mentioned in the issue, but got the same 
 
 ## Environment building
 
+Install Dependencies
+
+```bash
+docker-compose run -w /home/app/frontend/ --rm next13-antd-error yarn install
+```
+
 Container Launch
 
 ```bash
