@@ -1,0 +1,13 @@
+version: "3"
+services:
+  next13-antd-error:
+    container_name: next13-antd-error
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/home/app/frontend
+    tty: true
+    ports:
+      - "3000:3000"
+    command: yarn dev
