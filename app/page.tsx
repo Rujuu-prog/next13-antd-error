@@ -1,9 +1,9 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { LineConfig } from "@ant-design/plots/es/components/line";
 import styles from "./page.module.css";
 
+import { LineConfig } from "@ant-design/plots/es/components/line";
 const Line: React.ComponentType<LineConfig & React.RefAttributes<unknown>> =
   dynamic(() => import("@ant-design/plots").then((mod) => mod.Line) as any, {
     ssr: false,
