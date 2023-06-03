@@ -1,5 +1,17 @@
 This is a repository for reporting bugs in antd.
 
+## 👍 Solution
+
+I solved the problem by importing the following.
+
+```typescript
+import { LineConfig } from "@ant-design/plots/es/components/line";
+const Line: React.ComponentType<LineConfig & React.RefAttributes<unknown>> =
+  dynamic(() => import("@ant-design/plots").then((mod) => mod.Line) as any, {
+    ssr: false,
+  });
+```
+
 ## Overview
 
 Using @ant-design/charts, I get an error "Module not found: ESM packages (d3-interpolate) need to be imported. Use 'import' to reference the package instead".
@@ -46,6 +58,18 @@ Import trace for requested module:
 ```
 
 ## Branch
+
+## resolved
+
+This is a resolved branch.
+
+```typescript
+import { LineConfig } from "@ant-design/plots/es/components/line";
+const Line: React.ComponentType<LineConfig & React.RefAttributes<unknown>> =
+  dynamic(() => import("@ant-design/plots").then((mod) => mod.Line) as any, {
+    ssr: false,
+  });
+```
 
 ### main
 
