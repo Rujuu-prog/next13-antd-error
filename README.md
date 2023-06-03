@@ -4,13 +4,7 @@ This is a repository for reporting bugs in antd.
 
 I solved the problem by importing the following.
 
-```typescript
-import { LineConfig } from "@ant-design/plots/es/components/line";
-const Line: React.ComponentType<LineConfig & React.RefAttributes<unknown>> =
-  dynamic(() => import("@ant-design/plots").then((mod) => mod.Line) as any, {
-    ssr: false,
-  });
-```
+https://github.com/Rujuu-prog/next13-antd-error/blob/d0dfb6b7d9d7eff48ad57a0916e96744dfd9e858/app/page.tsx#L6-L10
 
 ## Overview
 
